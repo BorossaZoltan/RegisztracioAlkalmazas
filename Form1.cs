@@ -16,5 +16,25 @@ namespace RegisztracioAlkalmazas
         {
             InitializeComponent();
         }
+
+        private void buttonHozzaad_Click(object sender, EventArgs e)
+        {
+            string szoveg = textBoxUjhobbi.Text;
+            if (String.IsNullOrWhiteSpace(szoveg))
+            {
+                MessageBox.Show("Üres a beviteli mező!");
+                return;
+            }
+            if (listBoxHobbiLista.Items.Contains(szoveg))
+            {
+                MessageBox.Show("Ez már szerepel!");
+                return;
+            }
+                
+                listBoxHobbiLista.Items.Add(szoveg.TrimStart().TrimEnd());
+                textBoxUjhobbi.Text = "";
+                textBoxUjhobbi.Focus();
+            
+        }
     }
 }
