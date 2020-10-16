@@ -33,15 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBoxNev = new System.Windows.Forms.TextBox();
+            this.szulDatumBeker = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonFerfi = new System.Windows.Forms.RadioButton();
+            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.listBoxHobbiLista = new System.Windows.Forms.ListBox();
+            this.textBoxUjhobbi = new System.Windows.Forms.TextBox();
+            this.buttonHozzaad = new System.Windows.Forms.Button();
+            this.buttonMentes = new System.Windows.Forms.Button();
+            this.buttonBetoltes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,98 +94,98 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Új hobbi:";
             // 
-            // textBox1
+            // textBoxNev
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxNev.Location = new System.Drawing.Point(192, 37);
+            this.textBoxNev.Name = "textBoxNev";
+            this.textBoxNev.Size = new System.Drawing.Size(127, 20);
+            this.textBoxNev.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // szulDatumBeker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(154, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(165, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.szulDatumBeker.Location = new System.Drawing.Point(154, 80);
+            this.szulDatumBeker.Name = "szulDatumBeker";
+            this.szulDatumBeker.Size = new System.Drawing.Size(165, 20);
+            this.szulDatumBeker.TabIndex = 6;
             // 
-            // radioButton1
+            // radioButtonFerfi
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(154, 129);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(31, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "F";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonFerfi.AutoSize = true;
+            this.radioButtonFerfi.Checked = true;
+            this.radioButtonFerfi.Location = new System.Drawing.Point(154, 129);
+            this.radioButtonFerfi.Name = "radioButtonFerfi";
+            this.radioButtonFerfi.Size = new System.Drawing.Size(31, 17);
+            this.radioButtonFerfi.TabIndex = 7;
+            this.radioButtonFerfi.TabStop = true;
+            this.radioButtonFerfi.Text = "F";
+            this.radioButtonFerfi.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(217, 129);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(33, 17);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "N";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonNo.AutoSize = true;
+            this.radioButtonNo.Location = new System.Drawing.Point(217, 129);
+            this.radioButtonNo.Name = "radioButtonNo";
+            this.radioButtonNo.Size = new System.Drawing.Size(33, 17);
+            this.radioButtonNo.TabIndex = 8;
+            this.radioButtonNo.Text = "N";
+            this.radioButtonNo.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listBoxHobbiLista
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(348, 69);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 9;
+            this.listBoxHobbiLista.FormattingEnabled = true;
+            this.listBoxHobbiLista.Location = new System.Drawing.Point(348, 69);
+            this.listBoxHobbiLista.Name = "listBoxHobbiLista";
+            this.listBoxHobbiLista.Size = new System.Drawing.Size(120, 95);
+            this.listBoxHobbiLista.TabIndex = 9;
             // 
-            // textBox2
+            // textBoxUjhobbi
             // 
-            this.textBox2.Location = new System.Drawing.Point(341, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(127, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBoxUjhobbi.Location = new System.Drawing.Point(341, 225);
+            this.textBoxUjhobbi.Name = "textBoxUjhobbi";
+            this.textBoxUjhobbi.Size = new System.Drawing.Size(127, 20);
+            this.textBoxUjhobbi.TabIndex = 10;
             // 
-            // button1
+            // buttonHozzaad
             // 
-            this.button1.Location = new System.Drawing.Point(393, 261);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Hozzáad";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonHozzaad.Location = new System.Drawing.Point(393, 261);
+            this.buttonHozzaad.Name = "buttonHozzaad";
+            this.buttonHozzaad.Size = new System.Drawing.Size(75, 23);
+            this.buttonHozzaad.TabIndex = 11;
+            this.buttonHozzaad.Text = "Hozzáad";
+            this.buttonHozzaad.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonMentes
             // 
-            this.button2.Location = new System.Drawing.Point(312, 355);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Mentés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonMentes.Location = new System.Drawing.Point(312, 355);
+            this.buttonMentes.Name = "buttonMentes";
+            this.buttonMentes.Size = new System.Drawing.Size(75, 23);
+            this.buttonMentes.TabIndex = 12;
+            this.buttonMentes.Text = "Mentés";
+            this.buttonMentes.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonBetoltes
             // 
-            this.button3.Location = new System.Drawing.Point(393, 355);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Betöltés";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonBetoltes.Location = new System.Drawing.Point(393, 355);
+            this.buttonBetoltes.Name = "buttonBetoltes";
+            this.buttonBetoltes.Size = new System.Drawing.Size(75, 23);
+            this.buttonBetoltes.TabIndex = 13;
+            this.buttonBetoltes.Text = "Betöltés";
+            this.buttonBetoltes.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 413);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonBetoltes);
+            this.Controls.Add(this.buttonMentes);
+            this.Controls.Add(this.buttonHozzaad);
+            this.Controls.Add(this.textBoxUjhobbi);
+            this.Controls.Add(this.listBoxHobbiLista);
+            this.Controls.Add(this.radioButtonNo);
+            this.Controls.Add(this.radioButtonFerfi);
+            this.Controls.Add(this.szulDatumBeker);
+            this.Controls.Add(this.textBoxNev);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -205,15 +205,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBoxNev;
+        private System.Windows.Forms.DateTimePicker szulDatumBeker;
+        private System.Windows.Forms.RadioButton radioButtonFerfi;
+        private System.Windows.Forms.RadioButton radioButtonNo;
+        private System.Windows.Forms.ListBox listBoxHobbiLista;
+        private System.Windows.Forms.TextBox textBoxUjhobbi;
+        private System.Windows.Forms.Button buttonHozzaad;
+        private System.Windows.Forms.Button buttonMentes;
+        private System.Windows.Forms.Button buttonBetoltes;
     }
 }
 
