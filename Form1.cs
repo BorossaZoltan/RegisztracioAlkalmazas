@@ -20,7 +20,7 @@ namespace RegisztracioAlkalmazas
             szulDatumBeker.Value = DateTime.Now;
 
         }
-
+        //--------------------------------------------------------------------------------------
         public void mentesgombFelold()
         {
             if (!String.IsNullOrWhiteSpace(textBoxNev.Text) &&
@@ -34,7 +34,7 @@ namespace RegisztracioAlkalmazas
                 buttonMentes.Enabled = false;
             }
         }
-        
+        //--------------------------------------------------------------------------------------
         private void buttonHozzaad_Click(object sender, EventArgs e)
         {
             string szoveg = textBoxUjhobbi.Text;
@@ -52,13 +52,12 @@ namespace RegisztracioAlkalmazas
                 textBoxUjhobbi.Focus();
                 return;
             }
-                
                 listBoxHobbiLista.Items.Add(szoveg.TrimStart().TrimEnd());
                 textBoxUjhobbi.Text = "";
                 textBoxUjhobbi.Focus();
             mentesgombFelold();
         }
-
+        //--------------------------------------------------------------------------------------
         private void buttonMentes_Click(object sender, EventArgs e)
         {
             try
@@ -69,8 +68,6 @@ namespace RegisztracioAlkalmazas
                         return;
                     }
                 string fileName = saveFileDialog.FileName;
-
-
                 using (var sw = new StreamWriter(fileName))
                 {
                     if (!String.IsNullOrWhiteSpace(textBoxNev.Text))
@@ -85,8 +82,6 @@ namespace RegisztracioAlkalmazas
                     }
                     if (szulDatumBeker.Value < DateTime.Now)
                     {
-                        
-                        
                         sw.WriteLine(szulDatumBeker.Value.ToString("yyyy/MM/dd"));
                     }
                     else
@@ -119,7 +114,6 @@ namespace RegisztracioAlkalmazas
                                 db++;
                             }
                         }
-
                     }
                     else
                     {
@@ -128,28 +122,22 @@ namespace RegisztracioAlkalmazas
                         return;
                     }
                     sw.Close();
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Hiba a mentés során");
             }
-            
         }
-
+        //--------------------------------------------------------------------------------------
         private void buttonBetoltes_Click(object sender, EventArgs e)
         {
             List<string> visszatoltLista = new List<string>();
-
-            
-
             try
             {
                 var result = openFileDialog1.ShowDialog();
                 if (result != DialogResult.OK)
                 {
-                    
                     return;
                 }
                 string fileName = openFileDialog1.FileName;
@@ -158,7 +146,6 @@ namespace RegisztracioAlkalmazas
                     textBoxNev.Clear();
                     radioButtonFerfi.Checked = true;
                 StreamReader sr = new StreamReader(fileName);
-
                 textBoxNev.Text = sr.ReadLine();
                 szulDatumBeker.Value = DateTime.Parse(sr.ReadLine());
                 if (sr.ReadLine() == "Férfi")
@@ -169,7 +156,6 @@ namespace RegisztracioAlkalmazas
                 {
                     radioButtonNo.Checked = true;
                 }
-
                 while (!sr.EndOfStream)
                 {
                     string sor = sr.ReadLine();
@@ -185,15 +171,13 @@ namespace RegisztracioAlkalmazas
                     }
                 }
                 sr.Close();
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Hiba a beolvasás során");
             }
-
         }
-
+        //--------------------------------------------------------------------------------------
         private void textBoxNev_TextChanged(object sender, EventArgs e)
         {
             mentesgombFelold();
@@ -209,5 +193,7 @@ namespace RegisztracioAlkalmazas
             mentesgombFelold();
         }
     }
+
+    //--------------------------------------------------------------------------------------
     
 }
