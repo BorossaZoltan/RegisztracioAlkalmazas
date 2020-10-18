@@ -42,6 +42,8 @@
             this.buttonHozzaad = new System.Windows.Forms.Button();
             this.buttonMentes = new System.Windows.Forms.Button();
             this.buttonBetoltes = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -100,13 +102,19 @@
             this.textBoxNev.Name = "textBoxNev";
             this.textBoxNev.Size = new System.Drawing.Size(127, 20);
             this.textBoxNev.TabIndex = 5;
+            this.textBoxNev.TextChanged += new System.EventHandler(this.textBoxNev_TextChanged);
             // 
             // szulDatumBeker
             // 
+            this.szulDatumBeker.CustomFormat = "";
+            this.szulDatumBeker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.szulDatumBeker.Location = new System.Drawing.Point(154, 80);
+            this.szulDatumBeker.MaxDate = new System.DateTime(2222, 10, 18, 0, 0, 0, 0);
             this.szulDatumBeker.Name = "szulDatumBeker";
             this.szulDatumBeker.Size = new System.Drawing.Size(165, 20);
             this.szulDatumBeker.TabIndex = 6;
+            this.szulDatumBeker.Value = new System.DateTime(2020, 10, 18, 0, 0, 0, 0);
+            this.szulDatumBeker.ValueChanged += new System.EventHandler(this.szulDatumBeker_ValueChanged);
             // 
             // radioButtonFerfi
             // 
@@ -137,6 +145,7 @@
             this.listBoxHobbiLista.Name = "listBoxHobbiLista";
             this.listBoxHobbiLista.Size = new System.Drawing.Size(120, 95);
             this.listBoxHobbiLista.TabIndex = 9;
+            this.listBoxHobbiLista.SelectedValueChanged += new System.EventHandler(this.listBoxHobbiLista_SelectedValueChanged);
             // 
             // textBoxUjhobbi
             // 
@@ -157,12 +166,14 @@
             // 
             // buttonMentes
             // 
+            this.buttonMentes.Enabled = false;
             this.buttonMentes.Location = new System.Drawing.Point(312, 355);
             this.buttonMentes.Name = "buttonMentes";
             this.buttonMentes.Size = new System.Drawing.Size(75, 23);
             this.buttonMentes.TabIndex = 12;
             this.buttonMentes.Text = "Mentés";
             this.buttonMentes.UseVisualStyleBackColor = true;
+            this.buttonMentes.Click += new System.EventHandler(this.buttonMentes_Click);
             // 
             // buttonBetoltes
             // 
@@ -172,6 +183,15 @@
             this.buttonBetoltes.TabIndex = 13;
             this.buttonBetoltes.Text = "Betöltés";
             this.buttonBetoltes.UseVisualStyleBackColor = true;
+            this.buttonBetoltes.Click += new System.EventHandler(this.buttonBetoltes_Click);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Jegyzettömb (*.txt)|*.txt|All files (*.*)|*.*";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "Szöveges dokumentumok|*.txt";
             // 
             // Form1
             // 
@@ -215,6 +235,8 @@
         private System.Windows.Forms.Button buttonHozzaad;
         private System.Windows.Forms.Button buttonMentes;
         private System.Windows.Forms.Button buttonBetoltes;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
