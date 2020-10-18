@@ -167,7 +167,7 @@ namespace RegisztracioAlkalmazas
                 }
                 else
                 {
-                    radioButtonNo.Checked = false;
+                    radioButtonNo.Checked = true;
                 }
 
                 while (!sr.EndOfStream)
